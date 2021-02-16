@@ -3,9 +3,6 @@ let panel = ["panel0","panel1","panel2","panel3","panel4","panel5","panel6","pan
 var flg1 = 0
 var flg2 = 0
 
-/*for (i = 0; i < panel.length; i++){
-    document.getElementById(panel[i]).innerHTML=1;
-}*/
 
 document.getElementById("success").style.visibility = "hidden"  //「正解」を隠す。
 
@@ -65,9 +62,9 @@ document.getElementById(panel[8]).innerHTML=7
   //上記のように関数(function pushed1())を書けば、左上から三方向に数字を足せる
 
   function pushed(id){
-    var panelnumber = id.replace(/[^0-9]/g, ''); //idから数字の要素だけ抜く。panelnumberは押したパネルの場所
-    var subpanel = []       //パネルの表示している要素を入れる配列(この時点では空)
-    var de = []             //パネルidそのものを入れる配列
+    var panelnumber = id.replace(/[^0-9]/g, '');  //idから数字の要素だけ抜く。panelnumberは押したパネルの場所
+    var subpanel = []                             //パネルの表示している要素を入れる配列(この時点では空)
+    var de = []                                   //パネルidそのものを入れる配列
     
     if([1,3,4].includes(Number(panelnumber))){                //1を推したときに反応する奴
       subpanel.push(document.getElementById(panel[0]).innerHTML)
