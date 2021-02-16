@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>サンプルパズル</title>
+
+        <meta charset="utf-8">
+            <!--　上の文は文字コードの指定 -->
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+            <!--　上の文はbootstrapというフレームワークへのリンク。無料。これがあることでパネルがスタイリッシュになってる -->
+
+        <link rel="stylesheet" href="numberplus.css">
+
+            <!--  hrefは外部リンクや同フォルダ内の別ファイルとのリンクを指定、srcは埋め込むファイルのパス情報
+            多分この上下の文の順番を入れ替えると上手くいかなくなる。リンクを指定した後埋め込むので。多分　-->
+
+        
+
+    </head>
+
+    <body>
+
+        <center>
+
+            <h1>0パズル</h1>
+            <div id = 'rulebox' class='boxclass'>
+                <ul id = 'rule' class='naibuclass'>
+                    <h2>ルールおよび操作説明</h2>
+                    <p>
+                        １，パネルを押すと、押したパネルとその周囲のパネルの数字が変化します。<br />
+                        ２，押したパネルの数字は0になり、周囲には押したパネルの数字が足されます。<br />
+                        ３，しかし、足して二桁になる場合は、一桁目のみになり、10以上は切り捨てられます。<br />
+                        ４，この性質を利用して、9枚すべてのパネルを0にできれば正解です。<br />
+                    </p>
+                </ul>
+        </div>
+
+            <div id="bodydiv">
+
+                <button id="panel0" class="btn btn-secondary tile" onclick="pushed(this.id)" > </button> <button id="panel1" class="btn btn-secondary tile" onclick="pushed(this.id)" ></button> <button id="panel2" class="btn btn-secondary tile" onclick="pushed(this.id)" ></button><br />
+
+                <button id="panel3" class="btn btn-secondary tile" onclick="pushed(this.id)" ></button> <button id="panel4" class="btn btn-secondary tile" onclick="pushed(this.id)" ></button> <button id="panel5" class="btn btn-secondary tile" onclick="pushed(this.id)" ></button><br />
+
+                <button id="panel6" class="btn btn-secondary tile" onclick="pushed(this.id)" ></button> <button id="panel7"  class="btn btn-secondary tile" onclick="pushed(this.id)" ></button> <button id="panel8" class="btn btn-secondary tile" onclick="pushed(this.id)" ></button>
+                    <!-- btn btn-secondary tileは、bootstrapから引っ張ってきた要素。onclickはクリックに大してこう反応せよというコマンド　-->
+            </div>
+
+            <br>
+
+            <button class="btn btn-light" onclick="reset()">リセット</button>
+            <br>
+            <div id = "success">正解</div>
+            <div id = "kakunin"></div>
+                
+            
+            
+        </center>
+        
+        <script type="text/javascript" src="puls.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,19 @@
+.tile {
+
+    width:100px; 
+
+    height:100px;
+
+    font-family:arial black;
+
+    font-size: x-large;
+
+  }
+  .boxclass{
+    text-align: center;
+    
+  }
+  .naibuclass{
+    display: inline-block;
+    text-align: left;
+  }
